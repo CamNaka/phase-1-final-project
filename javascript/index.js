@@ -40,4 +40,8 @@ function clickListener() {
 }
 
 
-
+function counter() {
+  const createCnt = document.createElement('h3')
+  createCnt.setAttribute('id', 'counterId')
+  counter-form.appendChild('createCnt')
+}
