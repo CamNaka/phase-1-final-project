@@ -2,25 +2,23 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  width: 100%;
 }
 
 #header {
- height: 130px;
- background-color: rgb(255, 255, 255);
- border-bottom: 1px;
- border-bottom-style: solid;
- border-bottom-color:black;
- box-shadow: 0px 3px 15px #c0c0c0
+  height: 110px;
+  width: 100%;
+  margin: 0;
 }
 
-#text {
+#text-cgs {
   position: relative;
   text-align: center;
   font-size: 40px;
   font-family: monaco;
   color: rgb(54, 164, 201);
   left: 40px;
-  bottom: 100px;
+  bottom: 107px;
 }
 
 #header-img {
@@ -31,25 +29,61 @@ html, body {
   margin-right: auto;
   height: 100px;
   right: 40px;
-  top: 15px;
+  top: 10px;
 }
 
 #shopping-cart {
   position: relative;
   width: 40px;
   left: 85%;
-  bottom: 22px;
-  
+  bottom: 30px;
 }
 
-#item-container {
+#counter-container {
+  height: 30px;
+  width: 100%;
   margin: 0;
 }
-#item-form {
+#counter-form {
   position: relative;
   color: rgb(174, 87, 87);
   text-align: center;
   font-size: 12px;
   float: right;
   right: 50px;
+}
+#counter {
+  margin: 0;
+}
+
+#item-area {
+  margin: 0 auto;
+}
+#card-container {
+  position: relative;
+  margin: 0 auto;
+}
+#card {
+  text-align: center;
+  padding: 16px;
+  width: 240px;
+  height: 400px;
+  display: inline-grid;
+  justify-self: center;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 50px;
+  border-top: 1px;
+  border-top-color: gray;
+  border-top-style: solid;
+  
+}
+#card-image {
+  justify-self: center;
+  height: 12rem;
+  width: 190px;
+}
+#nameId {
+  font-size: 20px;
+  font-family: arial;
 }

@@ -19,4 +19,4 @@
 
 ### step 4: Come up with an MVP
   * When item is clicked a counter will increment by the price of added item
-  * User will be able to like an item
+  * User will be able to like an item 
