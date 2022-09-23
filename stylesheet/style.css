@@ -44,16 +44,17 @@ html, body {
   width: 100%;
   margin: 0;
 }
-#counter-form {
+
+
+#count-id {
   position: relative;
+  margin: 0;
+  font-size: 20px;
+  right: 50px;
   color: rgb(174, 87, 87);
   text-align: center;
-  font-size: 12px;
   float: right;
-  right: 50px;
-}
-#counter {
-  margin: 0;
+  
 }
 
 #item-area {
@@ -76,11 +77,10 @@ html, body {
   border-top: 1px;
   border-top-color: gray;
   border-top-style: solid;
-  
 }
 #card-image {
   justify-self: center;
-  height: 12rem;
+  height: 190px;
   width: 190px;
 }
 #nameId {

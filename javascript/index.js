@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('im loaded')
   getItems()
-  clickListener()
+  //countListener()
+  //testIdOne()
 
+  
 });
 
 
@@ -28,20 +30,40 @@ function itemCards(items) {
 
   const itemSelection = document.getElementById('card-container')
   itemSelection.innerHTML += itemCards
-}
-
-function clickListener() {
+  
   document.addEventListener('click', (event) => {
     if (event.target.classList.value === 'ATCclass') {
-      console.log('you found me')
-      alert('Item was added to cart')
+      console.log(items.id)
+      //alert('Item was added to cart')
+      
     }
   })
 }
 
+/*
+function countListener() {
+  document.addEventListener('click', (event) => {
+    if (event.target.classList.value === 'ATCclass') {
+      console.log(items.price)
+      //alert('Item was added to cart')
+      items.price
+    }
+  })
+}
+*/
 
-function counter() {
-  const createCnt = document.createElement('h3')
-  createCnt.setAttribute('id', 'counterId')
-  counter-form.appendChild('createCnt')
+function second() {
+  const click = document.getElementById('ATCclass')
+
+  click.addEventListener('click', () => {
+    console.log('got me')
+  })
+}
+
+function testIdOne() {
+  document.addEventListener('click', (event)=> {
+    if(event.target.classList.te === 1) {
+      console.log('got it')
+    }
+  })
 }
