@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('im loaded')
-  getItems()
-  countListener()
   
+  getItems()
+  //countListener()
+  //itemListener()
+  itemClick()
 
 });
+
 
 
 function getItems() {
@@ -14,7 +17,7 @@ function getItems() {
     })
     .then(data => {
       data.map(eachItem => itemCard(eachItem))
-      console.log(data.id)
+      //console.log(data)
     });
 
 }
@@ -29,19 +32,39 @@ function itemCard(items) {
     <p id="nameId">${items.name}</p>
     <img src=${items.image} id="card-image" />
     <p id="item-price">${"$" + items.price + ".00"}</p>
-    <button class="ATCclass">Add to cart</button>
+    <button class='hi'>Add to cart</button>
   </div>`
 
   const itemSelection = document.getElementById('card-container')
-  itemSelection.innerHTML += Cards
+  itemSelection.innerHTML += itemCard
 
 }
 
 function countListener() {
   document.addEventListener('click',(event) => {
-    if(event.target.classList.value === 'ATCclass') {
-      console.log(event.target.classList)
+    if(event.target.classList.value === 'ATCclass'); {
+      //console.log(event.target.classList)
+      
     }
   })
 }
+
+function itemListener() {
+  const buttonClass = document.getElementsByClassName('1')
+  buttonClass.addEventListener('click', () => {
+    console.log('hi')
+  })
+}
+
+function itemClick() {
+  const butt  = document.getElementsByClassName('hi')
+  butt.addEventListener('click', () => {
+    console.log('hi')
+  })
+}
+
+
+
+
+
 
