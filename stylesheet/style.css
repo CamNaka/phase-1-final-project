@@ -50,7 +50,7 @@ html, body {
   position: relative;
   margin: 0;
   font-size: 20px;
-  right: 50px;
+  right: 130px;
   color: rgb(174, 87, 87);
   text-align: center;
   float: right;
@@ -86,4 +86,16 @@ html, body {
 #nameId {
   font-size: 20px;
   font-family: arial;
+}
+
+#email-container {
+  position: relative;
+  width: 800px;
+  height: 50px;
+}
+#emailForm {
+  position: relative;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }

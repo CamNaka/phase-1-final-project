@@ -54,6 +54,14 @@
       "image": "https://m.media-amazon.com/images/I/518dyU5LdvL._AC_SY355_.jpg",
       "price": "15"
     }
+  ],
+
+  "Emails": [
+    {
+      "id": 0,
+      "name": "Cameron Nakaba",
+      "Email": "cameronnakaba4@gmail.com"
+    }
   ]
 }
     
