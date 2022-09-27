@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   emailButton()
 });
 
+
 function getItems() {
   fetch('http://localhost:3000/Golf-items')
     .then(resp => {
@@ -17,9 +18,6 @@ function getItems() {
       //console.log(data)
     });
 }
-
-
-
 
 
 function itemCard(items) {
@@ -35,23 +33,16 @@ function itemCard(items) {
   itemSelection.innerHTML += itemCard
 }
 
-const button = document.querySelector('#buttId')
-const emailForm = document.querySelector('#emailForm')
 
 const div = document.createElement('div')
 div.id = 'count-id'
 const counter = document.querySelector('#count-id')
-const num = Number(counter.textContent)
-
-let data = 0
 
 
 function countListener() {
   document.addEventListener('click',(event) => {
     if(event.target.classList.value === '0') {
       counter.textContent = parseInt(counter.textContent) + 600
-      
-      
       alert('Golf clubs added to shopping cart')
     }
     else if(event.target.classList.value === '1') {
@@ -90,16 +81,14 @@ function countListener() {
 }
 
 
-
-
-
+const button = document.querySelector('#buttId')
+const emailForm = document.querySelector('#emailForm')
 
 function createForm() {
   const formContainer = document.getElementById('email-container')
   const form = document.createElement('form')
   const formId = form.setAttribute('id', 'emailForm')
   
-
   const nameInput = document.createElement('input')
   nameInput.setAttribute('id', 'nameId')
   nameInput.setAttribute('placeholder', 'Name...')
@@ -117,12 +106,13 @@ function createForm() {
 
 }
 
+
 function emailButton() {
   document.addEventListener('click', (e)=> {
     e.preventDefault()
     if(e.target.classList.value === 'buttId') {
-      //console.log(e.target.name.value, 'hi')
-      postEmail(e.target.name.value, e.target.email.value)
+      console.log(e.target.name.value, 'hi')
+      //postEmail(e.target.name.value, e.target.email.value)
     }
   })
 }
@@ -133,17 +123,10 @@ function postEmail(name, email) {
     method: 'POST',
     header: {
     "Content-Type": "application/json",
-    Accept: "application/json"
+    //Accept: "application/json"
     },
-
-    body:{
-      name, email
-    }
+    body:JSON.stringify(name, email)
   })
-  .then(resp => {
-    return resp.json();
-  })
-  .then(eachItem => {
-    itemCard(eachItem);
-  })
+  .then(resp => resp.json())
+  .then(eachItem => console.log(eachItem))
 }
