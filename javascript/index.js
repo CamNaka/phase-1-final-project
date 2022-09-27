@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   getItems()
   countListener()
   createForm()
-});
+  emailButton()
 
+});
+const button = document.querySelector('#buttId')
+const emailForm = document.querySelector('#emailForm')
 
 
 function getItems() {
@@ -44,54 +47,65 @@ function countListener() {
   document.addEventListener('click',(event) => {
     if(event.target.classList.value === '0') {
       console.log('0 index')
-
+      alert('Golf clubs added to shopping cart')
       
     }
     else if(event.target.classList.value === '1') {
-      console.log('im the other 1 index')
-      //need to add price of item to counter when clicked
+  
+      alert('Golf glove added to shopping cart')
     }
     else if(event.target.classList.value === '2'){
-      console.log('im the other 2 index')
+      
+      alert('Golf shoes added to shopping cart')
     }
     else if(event.target.classList.value === '3'){
-      console.log('im the other 3 index')
+      
+      alert("Tee's added to shopping cart")
     }
     else if(event.target.classList.value === '4'){
-      console.log('im the other 4 index')
+      
+      alert('Golf balls added to shopping cart')
     }
     else if(event.target.classList.value === '5'){
-      console.log('im the other 5 index')
+      
+      alert('Golf ball markers added to shopping cart')
     }
     else if(event.target.classList.value === '6'){
-      console.log('im the other 6 index')
+      
+      alert('Divot repair tool added to shopping cart')
     }
     else if(event.target.classList.value === '7'){
-      console.log('im the other 7 index')
+      
+      alert('Small towel added to shopping cart')
     }
     else if(event.target.classList.value === '8'){
-      console.log('im the other 8 index')
+      
+      alert('Golf club tool added to shopping cart')
     }
   })
 }
 
 
-function postNewMonster(name, email) {
-  fetch('http://localhost:3000/Emails', {
+function postEmail(name, email) {
+  fetch('http://localhost:3000/Golf-items', {
     method: 'POST',
-    header: {
+    header: 
+    {
     "Content-Type": "application/json",
     Accept: "application/json"
     },
 
-    body: {
-      name, email
-    }
-
+    body: JSON.stringify({
+      'name': name,
+      'email': email
+    })
   })
-  .then(resp => resp.json())
-  .then(eachItem => console.log(eachItem))
-    
+  .then(resp => {
+    return resp.json();
+  })
+  .then(eachItem => {
+    itemCard(eachItem);
+  })
 }
 
 
@@ -99,24 +113,44 @@ function postNewMonster(name, email) {
 function createForm() {
   const formContainer = document.getElementById('email-container')
   const form = document.createElement('form')
-
-  form.id = 'emailForm'
+  const formId = form.setAttribute('id', 'emailForm')
+  
 
   const nameInput = document.createElement('input')
-  const nameId = nameInput.setAttribute('id', 'nameId')
+  nameInput.setAttribute('id', 'nameId')
   nameInput.setAttribute('placeholder', 'Name...')
 
   const emailInput = document.createElement('input')
-  const emailId = emailInput.setAttribute('id', 'emailId')
+  emailInput.setAttribute('id', 'emailId')
   emailInput.setAttribute('placeholder', 'Email...')
 
-  
-
   const createButton = document.createElement('button')
-  createButton.textContent = 'Create'
-
-  
+  createButton.setAttribute('class', 'buttId')
+  createButton.textContent = 'Submit'
 
   form.append(nameInput, emailInput, createButton)
   formContainer.append(form)
+
 }
+
+function emailButton() {
+  document.addEventListener('click', (e)=> {
+    e.preventDefault()
+    console.log(e.target)
+  })
+
+  /*
+  document.addEventListener('click', (e) => {
+    //e.preventDefault()
+    if(e.target.name.value && e.target.email.value)
+    console.log(e.target.name.value)
+    alert(hi)
+    postEmail(e.target.name.value, e.target.email.value)
+  })*/
+}
+/*
+document.addEventListener('click',(event) => {
+  if(event.target.classList.value === '0') {
+    console.log('0 index')
+    alert('Golf clubs added to shopping cart')
+*/
