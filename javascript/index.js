@@ -23,8 +23,8 @@ function getItems() {
 function itemCard(items) {
   const itemCard =
   `<div id="card">
-    <p id="nameId">${items.name}</p>
     <img src=${items.image} id="card-image" />
+    <p id="nameId">${items.name}</p>
     <p id="item-price">${"$" + items.price + ".00"}</p>
     <button class=${items.id}>Add to cart</button>
   </div>`
@@ -43,6 +43,7 @@ function countListener() {
   document.addEventListener('click',(event) => {
     if(event.target.classList.value === '0') {
       counter.textContent = parseInt(counter.textContent) + 600
+      
       alert('Golf clubs added to shopping cart')
     }
     else if(event.target.classList.value === '1') {
@@ -86,7 +87,7 @@ const emailForm = document.querySelector('#emailForm')
 
 function createForm() {
   const formContainer = document.getElementById('email-container')
-  const form = document.createElement('form')
+  const form = document.createElement('div')
   const formId = form.setAttribute('id', 'emailForm')
   
   const nameInput = document.createElement('input')
@@ -111,7 +112,8 @@ function emailButton() {
   document.addEventListener('click', (e)=> {
     e.preventDefault()
     if(e.target.classList.value === 'buttId') {
-      console.log(e.target.name.value, 'hi')
+      const names = document.getElementById('nameId')
+      console.log(e.target.names.value, 'hi')
       //postEmail(e.target.name.value, e.target.email.value)
     }
   })
@@ -119,7 +121,7 @@ function emailButton() {
 
 
 function postEmail(name, email) {
-  fetch('http://localhost:3000/Golf-items', {
+  fetch('http://localhost:3000/Emails', {
     method: 'POST',
     header: {
     "Content-Type": "application/json",
