@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   clearButton.addEventListener('click', () => {
     counter.textContent = 0
   })
+
 });
 
 
@@ -115,23 +116,23 @@ function createForm() {
 
 
 
+
 const doc = document.querySelector('#email-container')
 
 function newEmail() {
   doc.addEventListener('submit',(e) => {
     e.preventDefault()
     postEmail(e.target.inputName.value, e.target.inputEmail.value)
-   
-    //postEmail(e.target.inputName.value, e.target.inputEmail.value)
   })
 }
+
 
 
 
 //const namesCap = document.getElementById('input-name').value
 //const emailsCap = document.getElementById('input-email').value
 
-function postEmail(name, email) {
+function postEmail(inputName, inputEmail) {
   fetch('http://localhost:3000/Emails', {
     method: 'POST',
     header: 
@@ -141,8 +142,8 @@ function postEmail(name, email) {
     },
 
     body: JSON.stringify({
-      "name": name,
-      "email": email
+      "name": inputName,
+      "email": inputEmail
     })
   })
   .then(resp => {
