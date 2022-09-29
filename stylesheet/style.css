@@ -126,9 +126,3 @@ html, body {
   text-align: center;
   margin-bottom: 50px;
 }
-#emailNameId,
-#emailId,
-#buttId {
-  height: 20px;
-  margin: 5px;
-}

@@ -3,11 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
   
   getItems()
   countListener()
-  createForm()
-  emailButton()
-  //secEmail()
-  clearCartButton()
-  postEmail()
+  //createForm()
+
+  newEmail()
+
+  
+
+  
+  const clearButton = document.getElementById("clearCart")
+
+  clearButton.addEventListener('click', () => {
+    counter.textContent = 0
+  })
 });
 
 
@@ -83,10 +90,9 @@ function countListener() {
   })
 }
 
-
+/*
 const button = document.querySelector('#buttId')
 const emailForm = document.querySelector('#emailForm')
-
 function createForm() {
   const formContainer = document.getElementById('email-container')
   const form = document.createElement('div')
@@ -107,50 +113,49 @@ function createForm() {
   form.append(nameInput, emailInput, createButton)
   formContainer.append(form)
 
-}
+}*/
+
+//let name = document.getElementById('emailNameId').value 
+//let email = document.getElementById('emailId').value 
 
 
-function emailButton() {
-  document.addEventListener('submit', (e)=> {
-    e.preventDefault()
-    if(e.target.classList.value === 'buttId') {
-      const names = document.getElementById('emailNameId')
-      console.log(e.target.names, 'hi')
-      //postEmail(e.target.name.value, e.target.email.value)
-    }
-  })
-}
 
-const doc = document.querySelector('#email-container')
 
-function secEmail() {
-  doc.addEventListener('submit', (e) => {
-    e.preventDefault()
-    console.log('hi', e)
-  })
-}
+
+
+
+
+const namesCap = document.getElementById('input-name').value
+const emailsCap = document.getElementById('input-email').value
 
 function postEmail(name, email) {
   fetch('http://localhost:3000/Emails', {
     method: 'POST',
-    header: {
+    header: 
+    {
     "Content-Type": "application/json",
-    //Accept: "application/json"
+    Accept: "application/json"
     },
-    body:JSON.stringify(name, email)
+
+    body: JSON.stringify({
+      "name": name,
+      "email": email
+    })
   })
-  .then(resp => resp.json())
-  .then(data => {
-    itemCard(eachItem);
-    //console.log(data)
-  //.then(eachItem => console.log(eachItem))
-})
+  .then(resp => {
+    return resp.json();
+  })
+  .then(eachItem => {eachItem})
+}
+
+const doc = document.querySelector('#email-container')
+
+function newEmail() {
+  doc.addEventListener('submit', (e) => {
+    e.preventDefault()
+   
+    postEmail(e.target.namesCap, e.target.emailsCap)
+  })
 }
 
 
-const clearButton = document.getElementById("clearCart")
-function clearCartButton() {
-  clearButton.addEventListener('click', () => {
-    counter.textContent = 0
-  })
-}
