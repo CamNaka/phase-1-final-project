@@ -17,8 +17,8 @@ html, body {
   font-size: 40px;
   font-family: monaco;
   color: rgb(54, 164, 201);
-  left: 40px;
-  bottom: 107px;
+  left: 55px;
+  bottom: 65px;
 }
 
 #header-img {
@@ -35,26 +35,35 @@ html, body {
 #shopping-cart {
   position: relative;
   width: 40px;
-  left: 85%;
-  bottom: 30px;
+  float: right;
+  right: 70px;
+  bottom: 40px;
 }
 
 #counter-container {
+  display: block;
   height: 30px;
   width: 100%;
   margin: 0;
 }
-
-
-#count-id {
+#count-id,
+#dollarSign {
   position: relative;
   margin: 0;
   font-size: 20px;
-  right: 115px;
+  font-weight: 300;
+  font-family: arial;
+  float: right;
   color: rgb(174, 87, 87);
   text-align: center;
+  bottom: 32px;
+  right: 70px;
+}
+#clearCart {
+  position: relative;
   float: right;
-  
+  bottom: 0px;
+  right: 00px;
 }
 
 #item-area {
@@ -83,20 +92,43 @@ html, body {
   height: 190px;
   width: 190px;
 }
+
 #nameId {
   font-size: 20px;
   font-family: arial;
+  font-weight: 300;
+  margin-bottom: 0%;
+}
+#item-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(182, 35, 35);
+  
 }
 
 #email-container {
   position: relative;
-  width: 800px;
-  height: 50px;
+  width: 80%;
+  height: 150px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 10px;
+  margin: auto;
+  
 }
 #emailForm {
   position: relative;
-  width: auto;
+  text-align: center;
+}
+#form {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#emailNameId,
+#emailId,
+#buttId {
   height: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5px;
 }

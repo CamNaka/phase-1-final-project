@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   countListener()
   createForm()
   emailButton()
+  //secEmail()
+  clearCartButton()
+  postEmail()
 });
 
 
@@ -37,13 +40,12 @@ function itemCard(items) {
 const div = document.createElement('div')
 div.id = 'count-id'
 const counter = document.querySelector('#count-id')
-
+const num = counter.textContent
 
 function countListener() {
   document.addEventListener('click',(event) => {
     if(event.target.classList.value === '0') {
-      counter.textContent = parseInt(counter.textContent) + 600
-      
+      counter.textContent = parseInt(counter.innerHTML) + 600
       alert('Golf clubs added to shopping cart')
     }
     else if(event.target.classList.value === '1') {
@@ -91,7 +93,7 @@ function createForm() {
   const formId = form.setAttribute('id', 'emailForm')
   
   const nameInput = document.createElement('input')
-  nameInput.setAttribute('id', 'nameId')
+  nameInput.setAttribute('id', 'emailNameId')
   nameInput.setAttribute('placeholder', 'Name...')
 
   const emailInput = document.createElement('input')
@@ -99,7 +101,7 @@ function createForm() {
   emailInput.setAttribute('placeholder', 'Email...')
 
   const createButton = document.createElement('button')
-  createButton.setAttribute('class', 'buttId')
+  createButton.setAttribute('id', 'buttId')
   createButton.textContent = 'Submit'
 
   form.append(nameInput, emailInput, createButton)
@@ -109,16 +111,24 @@ function createForm() {
 
 
 function emailButton() {
-  document.addEventListener('click', (e)=> {
+  document.addEventListener('submit', (e)=> {
     e.preventDefault()
     if(e.target.classList.value === 'buttId') {
-      const names = document.getElementById('nameId')
-      console.log(e.target.names.value, 'hi')
+      const names = document.getElementById('emailNameId')
+      console.log(e.target.names, 'hi')
       //postEmail(e.target.name.value, e.target.email.value)
     }
   })
 }
 
+const doc = document.querySelector('#email-container')
+
+function secEmail() {
+  doc.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log('hi', e)
+  })
+}
 
 function postEmail(name, email) {
   fetch('http://localhost:3000/Emails', {
@@ -130,5 +140,17 @@ function postEmail(name, email) {
     body:JSON.stringify(name, email)
   })
   .then(resp => resp.json())
-  .then(eachItem => console.log(eachItem))
+  .then(data => {
+    itemCard(eachItem);
+    //console.log(data)
+  //.then(eachItem => console.log(eachItem))
+})
+}
+
+
+const clearButton = document.getElementById("clearCart")
+function clearCartButton() {
+  clearButton.addEventListener('click', () => {
+    counter.textContent = 0
+  })
 }

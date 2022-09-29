@@ -55,13 +55,23 @@
       "price": "15"
     }
   ],
-
   "Emails": [
     {
       "id": 0,
       "name": "Cameron Nakaba",
       "email": "cameronnakaba4@gmail.com"
+    },
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
     }
   ]
 }
-    
