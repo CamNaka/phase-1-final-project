@@ -1,17 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('im loaded')
-  
   getItems()
   countListener()
   //createForm()
 
   newEmail()
 
-  
-
-  
   const clearButton = document.getElementById("clearCart")
-
   clearButton.addEventListener('click', () => {
     counter.textContent = 0
   })
@@ -121,12 +115,21 @@ function createForm() {
 
 
 
+const doc = document.querySelector('#email-container')
+
+function newEmail() {
+  doc.addEventListener('submit',(e) => {
+    e.preventDefault()
+    postEmail(e.target.inputName.value, e.target.inputEmail.value)
+   
+    //postEmail(e.target.inputName.value, e.target.inputEmail.value)
+  })
+}
 
 
 
-
-const namesCap = document.getElementById('input-name').value
-const emailsCap = document.getElementById('input-email').value
+//const namesCap = document.getElementById('input-name').value
+//const emailsCap = document.getElementById('input-email').value
 
 function postEmail(name, email) {
   fetch('http://localhost:3000/Emails', {
@@ -148,14 +151,5 @@ function postEmail(name, email) {
   .then(eachItem => {eachItem})
 }
 
-const doc = document.querySelector('#email-container')
-
-function newEmail() {
-  doc.addEventListener('submit', (e) => {
-    e.preventDefault()
-   
-    postEmail(e.target.namesCap, e.target.emailsCap)
-  })
-}
 
 
