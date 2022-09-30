@@ -132,9 +132,15 @@ function newestEmail(){
 }
 
 function postEmail(object) {
-  
-  
   fetch('http://localhost:3000/Emails', {
+    method: 'POST',
+    headers: 
+    {
+    Accept: "application/json",
+    "Content-Type": "application/json"
+    
+    },
+  
     
 }
 /*
