@@ -121,9 +121,13 @@ function createForm() {
 const doc = document.querySelector('#email-container')
 
 function newestEmail(){
-  doc.addEventListener('submit', () => {
-    console.log('hi')
-    
+  doc.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let object = {
+      name: e.target.inputName.value,
+      email: e.target.inputEmail.value
+    }
+    postEmail(object)
   })
 }
 
