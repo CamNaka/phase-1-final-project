@@ -138,10 +138,11 @@ function postEmail(object) {
     {
     Accept: "application/json",
     "Content-Type": "application/json"
-    
     },
+    body:JSON.stringify(object)
+   
+  })
   
-    
 }
 /*
 const doc = document.querySelector('#email-container')
