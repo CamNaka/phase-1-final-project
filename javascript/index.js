@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   getItems()
   countListener()
-  //createForm()
   newestEmail()
-  //newEmail()
 
   const clearButton = document.getElementById("clearCart")
   clearButton.addEventListener('click', () => {
     counter.textContent = 0
   })
-
 });
 
 
@@ -85,38 +82,6 @@ function countListener() {
   })
 }
 
-/*
-const button = document.querySelector('#buttId')
-const emailForm = document.querySelector('#emailForm')
-function createForm() {
-  const formContainer = document.getElementById('email-container')
-  const form = document.createElement('div')
-  const formId = form.setAttribute('id', 'emailForm')
-  
-  const nameInput = document.createElement('input')
-  nameInput.setAttribute('id', 'emailNameId')
-  nameInput.setAttribute('placeholder', 'Name...')
-
-  const emailInput = document.createElement('input')
-  emailInput.setAttribute('id', 'emailId')
-  emailInput.setAttribute('placeholder', 'Email...')
-
-  const createButton = document.createElement('button')
-  createButton.setAttribute('id', 'buttId')
-  createButton.textContent = 'Submit'
-
-  form.append(nameInput, emailInput, createButton)
-  formContainer.append(form)
-
-}*/
-
-//let name = document.getElementById('emailNameId').value 
-//let email = document.getElementById('emailId').value 
-
-
-
-
-
 
 const doc = document.querySelector('#email-container')
 
@@ -144,18 +109,3 @@ function postEmail(object) {
   .then(resp => resp.json())
   .then(eachEmail => eachEmail)
 }
-/*
-const doc = document.querySelector('#email-container')
-
-function newEmail() {
-  doc.addEventListener('submit',(e) => {
-    e.preventDefault()
-    postEmail(e.target.inputName.value, e.target.inputEmail.value)
-  })
-}
-
-
-function newestEmail(){
-  doc.addEventListener('submit', handleSubmit)
-}
-*/
