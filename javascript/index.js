@@ -140,9 +140,9 @@ function postEmail(object) {
     "Content-Type": "application/json"
     },
     body:JSON.stringify(object)
-   
   })
-  
+  .then(resp => resp.json())
+  .then(eachEmail => eachEmail)
 }
 /*
 const doc = document.querySelector('#email-container')
