@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   getItems()
   countListener()
   //createForm()
-
-  newEmail()
+  newestEmail()
+  //newEmail()
 
   const clearButton = document.getElementById("clearCart")
   clearButton.addEventListener('click', () => {
@@ -20,7 +20,7 @@ function getItems() {
     })
     .then(data => {
       data.map(eachItem => itemCard(eachItem))
-      //console.log(data)
+      //console.log(eachItem)
     });
 }
 
@@ -117,6 +117,12 @@ function createForm() {
 
 
 
+
+const doc = document.querySelector('#email-container')
+
+
+
+/*
 const doc = document.querySelector('#email-container')
 
 function newEmail() {
@@ -127,30 +133,7 @@ function newEmail() {
 }
 
 
-
-
-//const namesCap = document.getElementById('input-name').value
-//const emailsCap = document.getElementById('input-email').value
-
-function postEmail(inputName, inputEmail) {
-  fetch('http://localhost:3000/Emails', {
-    method: 'POST',
-    header: 
-    {
-    "Content-Type": "application/json",
-    Accept: "application/json"
-    },
-
-    body: JSON.stringify({
-      "name": inputName,
-      "email": inputEmail
-    })
-  })
-  .then(resp => {
-    return resp.json();
-  })
-  .then(eachItem => {eachItem})
+function newestEmail(){
+  doc.addEventListener('submit', handleSubmit)
 }
-
-
-
+*/

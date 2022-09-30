@@ -58,11 +58,18 @@
   "Emails": [
     {
       "id": 0,
-      "name": "Cameron Nakaba",
-      "email": "cameronnakaba4@gmail.com"
+      "name": "Billy Bob",
+      "email": "bilyBob@gmail.com"
     },
     {
+      "name": "cameron",
+      "email": "cameronnakaba4@gmail.com",
       "id": 1
+    },
+    {
+      "name": "cameron Nakaba",
+      "email": "cameronnakaba4@gmail.com",
+      "id": 2
     }
   ]
 }
