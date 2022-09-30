@@ -131,6 +131,12 @@ function newestEmail(){
   })
 }
 
+function postEmail(object) {
+  
+  
+  fetch('http://localhost:3000/Emails', {
+    
+}
 /*
 const doc = document.querySelector('#email-container')
 
