@@ -120,7 +120,12 @@ function createForm() {
 
 const doc = document.querySelector('#email-container')
 
-
+function newestEmail(){
+  doc.addEventListener('submit', () => {
+    console.log('hi')
+    
+  })
+}
 
 /*
 const doc = document.querySelector('#email-container')
