@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  getItems()
-  countListener()
-  newestEmail()
+  getGolfItems()
+  priceListener()
+  newEmails()
 
   const clearButton = document.getElementById("clearCart")
-  clearButton.addEventListener('click', () => {
+  clearButton.addEventListener('click', (e) => {
+    e.preventDefault()
     counter.textContent = 0
   })
 });
 
 
-function getItems() {
+function getGolfItems() {
   fetch('http://localhost:3000/Golf-items')
     .then(resp => {
       return resp.json();
@@ -41,7 +42,7 @@ div.id = 'count-id'
 const counter = document.querySelector('#count-id')
 const num = counter.textContent
 
-function countListener() {
+function priceListener() {
   document.addEventListener('click',(event) => {
     if(event.target.classList.value === '0') {
       counter.textContent = parseInt(counter.innerHTML) + 600
@@ -83,10 +84,8 @@ function countListener() {
 }
 
 
-const doc = document.querySelector('#email-container')
-
-function newestEmail(){
-  doc.addEventListener('submit', (e) => {
+function newEmails(){
+  document.querySelector('#email-container').addEventListener('submit', (e) => {
     e.preventDefault()
     let object = {
       name: e.target.inputName.value,
