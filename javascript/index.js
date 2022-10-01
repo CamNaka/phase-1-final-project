@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   priceListener()
   newEmails()
 
+
+  clearInput()
+
   const clearButton = document.getElementById("clearCart")
   clearButton.addEventListener('click', (e) => {
     e.preventDefault()
@@ -84,8 +87,10 @@ function priceListener() {
 }
 
 
+const emailContainer = document.querySelector('#email-container')
+
 function newEmails(){
-  document.querySelector('#email-container').addEventListener('submit', (e) => {
+  emailContainer.addEventListener('submit', (e) => {
     e.preventDefault()
     let object = {
       name: e.target.inputName.value,
@@ -107,4 +112,17 @@ function postEmail(object) {
   })
   .then(resp => resp.json())
   .then(eachEmail => eachEmail)
+}
+
+
+const formButton = document.querySelector('.submitButton')
+const formName = document.querySelector('#inputName')
+const formEmail = document.querySelector('#emailName')
+
+function clearInput() {
+  formButton.addEventListener('click', () => {
+    if(formName.value) {
+      formName === ""
+    }
+  })
 }
