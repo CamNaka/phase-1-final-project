@@ -57,17 +57,12 @@
   ],
   "Emails": [
     {
-      "id": 0,
-      "name": "Billy Bob",
-      "email": "bilyBob@gmail.com"
-    },
-    {
       "name": "",
       "email": "",
       "id": 1
     },
     {
-      "name": "cameron",
+      "name": "",
       "email": "",
       "id": 2
     },
@@ -82,8 +77,8 @@
       "id": 4
     },
     {
-      "name": "",
-      "email": "",
+      "name": "Devon Echols",
+      "email": "billyBob4@gmail.com",
       "id": 5
     },
     {
@@ -92,13 +87,13 @@
       "id": 6
     },
     {
-      "name": "",
-      "email": "",
+      "name": "Devon Echols",
+      "email": "emailmarketingcampaign1@gmail.com",
       "id": 7
     },
     {
-      "name": "",
-      "email": "",
+      "name": "Cameron Nakaba",
+      "email": "cameronnakaba4@gmail.com",
       "id": 8
     },
     {
@@ -110,21 +105,6 @@
       "name": "",
       "email": "",
       "id": 10
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 11
-    },
-    {
-      "name": "Devon Echols",
-      "email": "emailmarketingcampaign1@gmail.com",
-      "id": 12
-    },
-    {
-      "name": "cameron",
-      "email": "cameronnakaba4@gmail.com",
-      "id": 13
     }
   ]
 }

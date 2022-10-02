@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   getGolfItems()
   priceListener()
   newEmails()
-
-
-  clearInput()
+  restartInput()
 
   const clearButton = document.getElementById("clearCart")
   clearButton.addEventListener('click', (e) => {
@@ -115,14 +113,13 @@ function postEmail(object) {
 }
 
 
-const formButton = document.querySelector('.submitButton')
+const restartButton = document.querySelector('.restartButton')
 const formName = document.querySelector('#inputName')
-const formEmail = document.querySelector('#emailName')
+const formEmail = document.querySelector('#inputEmail')
 
-function clearInput() {
-  formButton.addEventListener('click', () => {
-    if(formName.value) {
-      formName === ""
-    }
+function restartInput() {
+  restartButton.addEventListener('click', () => {
+    formName.value = ""
+    formEmail.value = ""
   })
 }
