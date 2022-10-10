@@ -1,9 +1,13 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
   getGolfItems()
   priceListener()
   newEmails()
   restartInput()
 
+  
+  
   const clearButton = document.getElementById("clearCart")
   clearButton.addEventListener('click', (e) => {
     e.preventDefault()
@@ -13,18 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function getGolfItems() {
-  fetch('http://localhost:3000/Golf-items')
-    .then(resp => {
-      return resp.json();
-    })
-    .then(data => {
+  fetch('http://localhost:3000/Golf-items') //returns promise
+    .then(resp => resp.json())//resp.json returns a promise and converts resp into json
+    .then(data => { //second .then to handle the promise that the first .then returns
       data.map(eachItem => itemCard(eachItem))
-      //console.log(eachItem)
+      console.log(data)
+
+      /*eachButton = json;
+      console.log(eachButton)*/
     });
 }
 
 
-function itemCard(items) {
+function itemCard(items) { //div id=items.id
   const itemCard =
   `<div id="card">
     <img src=${items.image} id="card-image" />
@@ -38,10 +43,8 @@ function itemCard(items) {
 }
 
 
-const div = document.createElement('div')
-div.id = 'count-id'
+
 const counter = document.querySelector('#count-id')
-const num = counter.textContent
 
 function priceListener() {
   document.addEventListener('click',(event) => {
@@ -123,3 +126,11 @@ function restartInput() {
     formEmail.value = ""
   })
 }
+
+
+
+
+
+
+
+

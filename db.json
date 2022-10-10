@@ -57,54 +57,24 @@
   ],
   "Emails": [
     {
-      "name": "",
-      "email": "",
+      "name": "Devon Echols",
+      "email": "billyBob4@gmail.com",
       "id": 1
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 2
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 3
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 4
     },
     {
       "name": "Devon Echols",
       "email": "billyBob4@gmail.com",
-      "id": 5
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 6
+      "id": 2
     },
     {
       "name": "Devon Echols",
-      "email": "emailmarketingcampaign1@gmail.com",
-      "id": 7
+      "email": "billyBob4@gmail.com",
+      "id": 3
     },
     {
-      "name": "Cameron Nakaba",
+      "name": "cameron",
       "email": "cameronnakaba4@gmail.com",
-      "id": 8
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 9
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 10
+      "id": 4
     }
   ]
 }

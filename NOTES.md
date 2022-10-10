@@ -21,8 +21,9 @@
   
 
 
-### step 4: non-MVP
+### step 4: Stretch
   * User will be able to like an item 
   * When item is clicked a counter will keep track of how many items are in the cart
   * There will be a quantity selector for each item
   * Expand on email sign up form
+  

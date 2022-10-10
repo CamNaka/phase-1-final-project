@@ -3,15 +3,18 @@ This project will be a shopping oriented web page where you can look through dif
 Updates coming.
 
 
-### Requirements
-* have json-server installed
+## Requirements
+* use json-server to install server
 
 
-### Installation Instructions
+## Installation Instructions
 * Fork and clone
 * Run json server for db.json
 * Open index.html in the browser
 
 
-### Constributing
-* You can contribute by emailing cameronnakaba@gmail.com
+## Constributing
+For changes, please open a pull request or email me at cameronnakaba4@gmail.com to discuss what you would like to change
+
+## Licence
+[MIT](https://choosealicense.com/licenses/mit/)
