@@ -1,8 +1,8 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  getGolfItems()
-  priceListener()
+  fetchGolfItems()
+  //priceListener()
   newEmails()
   restartInput()
 
@@ -15,18 +15,88 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 });
 
+const cardContainer = document.createElement('div')
+cardContainer.id = 'cardContainer'
 
+function fetchGolfItems() {
+  fetch('http://localhost:3000/Golf-items') //returns promise
+    .then(resp => resp.json())//resp.json returns a promise, handles fetch's promise and converts resp into json
+    .then(data => { //second .then to handle the promise that the first .then returns
+      //console.log('data:', data) //array of objects
+      let itemCard = document.getElementById('cardContainer')
+      data.forEach((golfItem) => (itemCard += loadGolfItem(golfItem)));
+      
+    });
+}
+
+function loadGolfItem(golfItem) {
+  const individualCard = document.createElement('div')
+  individualCard.id = 'individualCard'
+  const allCards = document.getElementById('item-area')
+  allCards.append(individualCard)
+
+  const itemName = document.createElement('h2')
+  itemName.id = 'nameId'
+  itemName.textContent = golfItem.name
+  individualCard.append(itemName)
+
+  const cardImg = document.createElement('img')
+  cardImg.id = 'cardImage'
+  cardImg.src = golfItem.image
+  individualCard.append(cardImg)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function getGolfItems() {
   fetch('http://localhost:3000/Golf-items') //returns promise
-    .then(resp => resp.json())//resp.json returns a promise and converts resp into json
+    .then(resp => resp.json())//resp.json returns a promise, handles fetch's promise and converts resp into json
     .then(data => { //second .then to handle the promise that the first .then returns
       data.map(eachItem => itemCard(eachItem))
       console.log(data)
 
-      /*eachButton = json;
-      console.log(eachButton)*/
+      
     });
 }
+
 
 
 function itemCard(items) { //div id=items.id
@@ -86,7 +156,7 @@ function priceListener() {
     }
   })
 }
-
+*/
 
 const emailContainer = document.querySelector('#email-container')
 

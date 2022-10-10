@@ -69,11 +69,8 @@ html, body {
 #item-area {
   margin: 0 auto;
 }
-#card-container {
-  position: relative;
-  margin: 0 auto;
-}
-#card {
+
+#individualCard {
   text-align: center;
   padding: 16px;
   width: 240px;
@@ -87,7 +84,7 @@ html, body {
   border-top-color: gray;
   border-top-style: solid;
 }
-#card-image {
+#cardImage {
   justify-self: center;
   height: 190px;
   width: 190px;
