@@ -46,7 +46,7 @@ html, body {
   width: 100%;
   margin: 0;
 }
-#count-id,
+#countId,
 #dollarSign {
   position: relative;
   margin: 0;
@@ -96,7 +96,7 @@ html, body {
   font-weight: 300;
   margin-bottom: 0%;
 }
-#item-price {
+#itemPrice {
   font-size: 20px;
   font-weight: 700;
   color: rgb(182, 35, 35);

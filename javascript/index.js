@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearButton = document.getElementById("clearCart")
   clearButton.addEventListener('click', (e) => {
     e.preventDefault()
-    counter.textContent = 0
+    totalPrice.textContent = 0
   })
 });
 
@@ -29,22 +29,39 @@ function fetchGolfItems() {
     });
 }
 
+const totalPrice = document.querySelector('#countId')
+
 function loadGolfItem(golfItem) {
   const individualCard = document.createElement('div')
-  individualCard.id = 'individualCard'
+  individualCard.id = 'individualCard' + golfItem.id
   const allCards = document.getElementById('item-area')
-  allCards.append(individualCard)
 
   const itemName = document.createElement('h2')
   itemName.id = 'nameId'
   itemName.textContent = golfItem.name
-  individualCard.append(itemName)
 
-  const cardImg = document.createElement('img')
-  cardImg.id = 'cardImage'
-  cardImg.src = golfItem.image
-  individualCard.append(cardImg)
+  const itemImg = document.createElement('img')
+  itemImg.id = 'cardImage'
+  itemImg.src = golfItem.image
 
+  const itemPrice = document.createElement('p')
+  itemPrice.id = 'itemPrice'
+  itemPrice.textContent = '$' + golfItem.price + ".00"
+
+  const addToCartButton = document.createElement('button')
+  addToCartButton.id = golfItem.id
+  addToCartButton.className = 'addToCartButtonId'
+  addToCartButton.textContent = 'ADD TO CART'
+
+  addToCartButton.addEventListener('click', () => {
+    alert(`${golfItem.name} were added to cart`)
+    totalPrice += parseInt(totalPrice)
+    
+    
+  })
+  
+  allCards.append(individualCard)
+  individualCard.append(itemName, itemImg, itemPrice, addToCartButton)
 }
 
 
@@ -158,6 +175,10 @@ function priceListener() {
 }
 */
 
+const restartButton = document.querySelector('.restartButton')
+const formName = document.querySelector('#inputName')
+const formEmail = document.querySelector('#inputEmail')
+
 const emailContainer = document.querySelector('#email-container')
 
 function newEmails(){
@@ -168,6 +189,7 @@ function newEmails(){
       email: e.target.inputEmail.value
     }
     postEmail(object)
+
   })
 }
 
@@ -185,18 +207,13 @@ function postEmail(object) {
   .then(eachEmail => eachEmail)
 }
 
-
-const restartButton = document.querySelector('.restartButton')
-const formName = document.querySelector('#inputName')
-const formEmail = document.querySelector('#inputEmail')
-
 function restartInput() {
-  restartButton.addEventListener('click', () => {
+  emailContainer.addEventListener('click', () => {
     formName.value = ""
     formEmail.value = ""
+    
   })
 }
-
 
 
 
