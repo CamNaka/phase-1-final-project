@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "name": "Golf glove",
+      "name": "Golf gloves",
       "image": "https://www.pgatoursuperstore.com/dw/image/v2/BCFG_PRD/on/demandware.static/-/Sites-master-catalog-pgatss/default/dw48b78a7a/Golf-Accessories/Golf-Gloves/Mens-Golf-Gloves/FootJoy/2000000009124/66184.png?sw=1200&sh=1200&sm=fit",
       "price": "15"
     },
@@ -38,78 +38,24 @@
     },
     {
       "id": 7,
-      "name": "Divot repair tool",
+      "name": "Divot repair tools",
       "image": "https://m.media-amazon.com/images/I/71+5zMHGTNL._AC_SL1500_.jpg",
       "price": "15"
     },
     {
       "id": 8,
-      "name": "Small towel",
+      "name": "Small towels",
       "image": "https://cdn.shopify.com/s/files/1/0306/5023/7068/files/WNKB-176_8fa19b88-56c8-48aa-95c9-19d24a194445_400x.jpg?v=1605495817",
       "price": "10"
     },
     {
       "id": 9,
-      "name": "Golf club tool",
+      "name": "Golf club tools",
       "image": "https://m.media-amazon.com/images/I/518dyU5LdvL._AC_SY355_.jpg",
       "price": "15"
     }
   ],
   "Emails": [
-    {
-      "name": "Devon Echols",
-      "email": "billyBob4@gmail.com",
-      "id": 1
-    },
-    {
-      "name": "cameron",
-      "email": "cameronnakaba4@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 3
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 4
-    },
-    {
-      "name": "",
-      "email": "billyBob4@gmail.com",
-      "id": 5
-    },
-    {
-      "name": "",
-      "email": "billyBob4@gmail.com",
-      "id": 6
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 7
-    },
-    {
-      "name": "",
-      "email": "billyBob4@gmail.com",
-      "id": 8
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 9
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 10
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 11
-    }
+    
   ]
 }
