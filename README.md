@@ -31,11 +31,11 @@ For changes, please open a pull request or email me at cameronnakaba4@gmail.com 
 >**NOTE**: This app is a single page application
 
 Image Sources
-https://www.pgatoursuperstore.com
-https://cdn.shopify.com
-https://golfweek.usatoday.com
-https://www.lifesavvy.com
-https://amazon.com
+- https://www.pgatoursuperstore.com
+- https://cdn.shopify.com
+- https://golfweek.usatoday.com
+- https://www.lifesavvy.com
+- https://amazon.com
 
 ## Licence
 [MIT](https://choosealicense.com/licenses/mit/)
