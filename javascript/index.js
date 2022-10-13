@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchGolfItems()
   newEmails()
   
+  
   const clearButton = document.getElementById("clearCart")
   clearButton.addEventListener('click', (e) => {
     e.preventDefault()
@@ -100,6 +101,16 @@ function postEmail(object) {
   formName.value = ""
   formEmail.value = ""
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
